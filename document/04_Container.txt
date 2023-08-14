@@ -1,0 +1,32 @@
+* 02_Container.dart 실습 내용
+
+0. Container - child
+    - 하나의 child(widget) 이 올 수 있으며 자식의 자식이 Container 로 올 수 있다.
+
+1. Container - color
+    - 컨테이너의 뒷 배경 색을 지정, 두가지 방법 으로 선언이 가능하다.
+    - color: Colors.deepOrange.shade200,
+    - color: Colors.withOpacity(0.3), --> 투명도
+    - color: Color(0xFFAB91FF),
+
+
+2. Container - padding, margin, width, height
+    - padding(내부 간격), margin(외부 간격) 의 경우 두개의 메소드로 선언이 가능하다.
+    - padding: EdgeInsets.fromLTRB(10, 12, 10, 12),
+    - margin: EdgeInsets.symmetric(vertical: 12, horizontal: 100),
+
+    - width, height 의 경우 double 형을 매개로 한다.
+    - width: 300,
+    - height: double.infinity,
+
+3. Container - decoration(BoxDecoration)
+    - BoxDecoration 객체 내에 color 를 설정하는 부분이 존재하여 container - color 와 동시에 사용하지 못한다.
+    - BoxDecoration - color : 컨테이너의 배경 색을 지정
+    - BoxDecoration - border : 컨테이너의 경계선 굵기, 색, 점선 등을 지정
+    - BoxDecoration - borderRadius : 컨테이너의 둥글기를 지정
+    - BoxDecoration - boxShadow : 여러개의 그림자 설정들을 list 상태로 지정
+    - BoxDecoration - boxShadow - offset(100, 30): 객체 기준 우로 100, 하로 30 이동한 위치에 그림자 생성
+    - BoxDecoration - boxShadow - blurRadius: 흐림 처리
+    - BoxDecoration - boxShadow - spreadRadius: 퍼짐 처리
+
+
