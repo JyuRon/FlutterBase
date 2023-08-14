@@ -1,0 +1,51 @@
+// flutter sdk 에서 기본적 으로 제공
+import 'package:flutter/material.dart';
+
+// MaterialApp : 가장 기본이 되는 widget tree 최상위 위치에 존재 하는 앱
+// Scaffold : MaterialApp 에서 화면을 구성할 때 가장 기본이 되는 도화지
+// SafeArea : 화면내 사용하지 않는 부분을 제외하고 출력을 하도록 설정
+// Center : 하위 위젯을 센터로 오게 설정
+// Text : 문자열을 출력하기 위한 위젯
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      body: TestWidget(),
+      appBar: AppBar(
+        title: Text('This is App bar'),
+        centerTitle: false,
+        actions: [
+          IconButton(icon: Icon(Icons.home), onPressed: () {
+            print('Tab icon click!');
+          },),
+          Icon(Icons.play_arrow),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.bug_report),
+        onPressed: () {
+          print("click floating bug repoart");
+        },
+      ),
+    ),
+  ));
+}
+
+// 단축어 : stless
+class TestWidget extends StatelessWidget {
+  const TestWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Center(
+        child: Text(
+          'Hello, Flutter',
+          style: TextStyle(
+            fontSize: 40,
+            color: Colors.black,
+          ),
+        ),
+      ),
+    );
+  }
+}
