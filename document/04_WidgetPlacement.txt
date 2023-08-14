@@ -1,0 +1,15 @@
+1. PlaceHolder
+    이 위치에 어떤 위젯이 올 것이니 사이즈 만큼 공간을 차지 해라
+
+
+2. Column(상하) & Row(좌우) 공통 옵션
+    - 해당 클래스는 Center 등으로 감싸지 못하며 별도의 옵션이 존재한다.
+    - mainAxisSize : 각 클래스가 제어하는 크기는 화면 전체를 잡게 된다. 이를 소속된 컨테이너 크기만 잡도록 설정
+    - mainAxisAlignment : 각 클래스가 제어하는 범위내에서 소속된 컨테이너를 정렬한다.
+    - crossAxisAlignment : 각 클래스가 제어하는 반대 범위의 크기는 여유 공간지 존재 하지 않음
+                           정렬을 위해서는 상위 컨테이너에서 여유 공간을 지정해줘야 함
+    - children : 배치할 컨테이너들을 입력한다.
+
+3. Scroll
+    - SingleChildScrollView : Column, Row 를 감싼다.
+    - Row 의 경우 scrollDirection: Axis.horizontal, 추가
